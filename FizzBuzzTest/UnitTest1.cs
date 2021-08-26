@@ -8,35 +8,37 @@ namespace FizzBuzzTest
     {
 
         [Theory]
-        [InlineData(3)]
-        [InlineData(6)]
-        [InlineData(9)]
+        [InlineData(3, "Fizz")]
+        [InlineData(6, "Fizz")]
+        [InlineData(9, "Fizz")]
+        [InlineData(0, "Zero")]
 
-        
-        public void DivisibleBy3(int input)
+        public void DivisibleBy3(int input,string output)
         {
             //int input = 3;
             
-            Assert.Equal("Fizz", new FizzBuzzLib().fizzbuzzer(input));
+            Assert.Equal(output, new FizzBuzzLib().fizzbuzzer(input));
         }
 
 
         [Theory]
-        [InlineData(5)]
-        [InlineData(10)]
-        [InlineData(20)]
-        public void DivisibleBy5(int input)
+        [InlineData(5,"Buzz")]
+        [InlineData(10, "Buzz")]
+        [InlineData(20, "Buzz")]
+        [InlineData(0, "Zero")]
+        public void DivisibleBy5(int input, string output)
         {
-            Assert.Equal("Buzz", new FizzBuzzLib().fizzbuzzer(input));
+            Assert.Equal(output, new FizzBuzzLib().fizzbuzzer(input));
         }
 
         [Theory]
-        [InlineData(15)]
-        [InlineData(30)]
-        [InlineData(45)]
-        public void DivisibleBy3and5(int input)
+        [InlineData(15, "FizzBuzz")]
+        [InlineData(30, "FizzBuzz")]
+        [InlineData(45, "FizzBuzz")]
+        [InlineData(0, "Zero")]
+        public void DivisibleBy3and5(int input, string output)
         {           
-            Assert.Equal("FizzBuzz", new FizzBuzzLib().fizzbuzzer(input));
+            Assert.Equal(output, new FizzBuzzLib().fizzbuzzer(input));
         }
 
     }

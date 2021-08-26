@@ -8,6 +8,7 @@ namespace FizzBuzzLibrary
         public string fizzbuzzer(int num)
         {
             string output = string.Empty;
+
             if (num % 3 == 0)
             {
                 output += "Fizz";
@@ -20,6 +21,7 @@ namespace FizzBuzzLibrary
             {
                 output += num.ToString();
             }
+            if (num < 1) { return output="Zero"; }
             return output;
         }
 
