@@ -14,9 +14,7 @@ namespace FizzBuzzTest
         [InlineData(0, "Zero")]
 
         public void DivisibleBy3(int input,string output)
-        {
-            //int input = 3;
-            
+        {       
             Assert.Equal(output, new FizzBuzzLib().fizzbuzzer(input));
         }
 
